@@ -98,6 +98,51 @@ const tokenOptions = [
     value: "CHOCO",
     icon: <GrinIcon />,
   },
+  {
+    text: "ETH",
+    value: "ETHOS",
+    icon: <GrinIcon />,
+  },
+  {
+    text: "LIN",
+    value: "LINKR",
+    icon: <GrinIcon />,
+  },
+  {
+    text: "DAI",
+    value: "DAIOS",
+    icon: <GrinIcon />,
+  },
+  {
+    text: "UNI",
+    value: "UNIK",
+    icon: <GrinIcon />,
+  },
+  {
+    text: "COM",
+    value: "COMPQ",
+    icon: <GrinIcon />,
+  },
+  {
+    text: "AAV",
+    value: "AAVEY",
+    icon: <GrinIcon />,
+  },
+  {
+    text: "SNX",
+    value: "SNXK",
+    icon: <GrinIcon />,
+  },
+  {
+    text: "MKR",
+    value: "MKRR",
+    icon: <GrinIcon />,
+  },
+  {
+    text: "YFI",
+    value: "YFIL",
+    icon: <GrinIcon />,
+  },
 ];
 
 type Rate = {
@@ -113,6 +158,15 @@ const rates: Rate[] = [
   { name: "NJOKU", ETH: 22000, BTC: 340000, SOL: 12000, MATIC: 3000 },
   { name: "MEISTER", ETH: 20000, BTC: 390000, SOL: 11000, MATIC: 9000 },
   { name: "CHOCO", ETH: 32000, BTC: 400000, SOL: 19000, MATIC: 13000 },
+  { name: "ETHOS", ETH: 18000, BTC: 350000, SOL: 15000, MATIC: 5000 },
+  { name: "LINKR", ETH: 15000, BTC: 360000, SOL: 16000, MATIC: 6000 },
+  { name: "DAIOS", ETH: 17000, BTC: 330000, SOL: 14000, MATIC: 4000 },
+  { name: "UNIK", ETH: 21000, BTC: 380000, SOL: 13000, MATIC: 7000 },
+  { name: "COMPQ", ETH: 23000, BTC: 370000, SOL: 18000, MATIC: 8000 },
+  { name: "AAVEY", ETH: 25000, BTC: 410000, SOL: 17000, MATIC: 10000 },
+  { name: "SNXK", ETH: 26000, BTC: 420000, SOL: 20000, MATIC: 11000 },
+  { name: "MKRR", ETH: 24000, BTC: 430000, SOL: 21000, MATIC: 12000 },
+  { name: "YFIL", ETH: 28000, BTC: 450000, SOL: 22000, MATIC: 14000 },
 ];
 
 export { walletOptions, tokenOptions, rates, tableData };
