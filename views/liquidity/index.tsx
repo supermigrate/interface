@@ -11,10 +11,12 @@ import { tableData } from "./dummy";
 const LiquidityView = ({ lang }: LangParamProp) => {
   const [showInfo, setShowInfo] = useState(true);
   const [showModal, setShowModal] = useState(false);
+  const [addId, setAddId] = useState<string>();
 
   const toggleShowInfo = () => setShowInfo((prev) => !prev);
 
   const handleShowModal = (id?: string) => {
+    setAddId(id);
     setShowModal((prev) => !prev);
   };
 
@@ -71,7 +73,7 @@ const LiquidityView = ({ lang }: LangParamProp) => {
         close={() => setShowModal(false)}
         variant="liquidity"
       >
-        <Add />
+        <Add id={addId} />
       </SMModal>
     </>
   );

@@ -27,7 +27,7 @@ const SMSelect = ({
 
   useEffect(() => {
     if (initialise) {
-      const defaultOption = options?.find((option) => option.text === text);
+      const defaultOption = options?.find((option) => option.value === text);
       if (defaultOption) {
         setSelectedOption(defaultOption);
         if (onClick) onClick(defaultOption);

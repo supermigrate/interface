@@ -12,6 +12,7 @@ const LiquidityInput = ({
   balanceText,
   balanceValue,
   disabled,
+  initialise,
 }: {
   value: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -22,6 +23,7 @@ const LiquidityInput = ({
   balanceText?: string;
   balanceValue?: string;
   disabled?: boolean;
+  initialise?: boolean;
 }) => {
   return (
     <div className="w-full p-4 flex justify-between items-center gap-5 bg-primary-2700 rounded border border-primary-2100">
@@ -34,7 +36,12 @@ const LiquidityInput = ({
         disabled={disabled}
       />
       <div className="flex flex-col items-end gap-[6px] shrink-0">
-        <SMSelect options={options} text={selectText} onClick={onSelect} />
+        <SMSelect
+          options={options}
+          text={selectText}
+          onClick={onSelect}
+          initialise={initialise}
+        />
         {balanceValue && balanceText && (
           <span className="text-primary-200 text-[12px] leading-[17.4px] font-medium">
             Balance: {balanceValue} {balanceText}

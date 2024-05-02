@@ -8,7 +8,7 @@ import Info from "./info";
 import Extra from "./extra";
 import LiquidityInput from "./input";
 
-const Add = () => {
+const Add = ({ id }: { id?: string }) => {
   const [step, setStep] = useState(0);
   const [values, setValues] = useState({ amount: "", liquidity: "" });
   const [wallet, setWallet] = useState<IOption>();
@@ -112,8 +112,9 @@ const Add = () => {
             placeholder="0"
             options={tokenOptions}
             onSelect={handleToken}
-            selectText="Select token"
+            selectText={id?.replace("$", "")!}
             disabled={!token}
+            initialise
           />
         </>
       )}
