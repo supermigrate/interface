@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import classNames from "classnames";
 
@@ -6,7 +6,13 @@ import { ISMSelect, IOption } from "./types";
 import SMClickAnimation from "../click-animation";
 import { SecondarySelectIcon } from "@/public/icons";
 
-const SMSelect = ({ text, disabled, onClick, options }: ISMSelect) => {
+const SMSelect = ({
+  text,
+  disabled,
+  onClick,
+  options,
+  initialise,
+}: ISMSelect) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState<IOption>();
 
@@ -18,6 +24,17 @@ const SMSelect = ({ text, disabled, onClick, options }: ISMSelect) => {
 
     if (onClick) onClick(option);
   };
+
+  useEffect(() => {
+    if (initialise) {
+      const defaultOption = options?.find((option) => option.text === text);
+      if (defaultOption) {
+        setSelectedOption(defaultOption);
+        if (onClick) onClick(defaultOption);
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [initialise, options, text]);
 
   return (
     <div className="relative">

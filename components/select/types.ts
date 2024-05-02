@@ -11,4 +11,5 @@ export interface ISMSelect {
   onClick?: (option: IOption) => void;
   options?: IOption[];
   disabled?: boolean;
+  initialise?: boolean;
 }
