@@ -9,7 +9,7 @@ interface RootProps {
 }
 
 export const metadata: Metadata = {
-  title: 'Superbridge',
+  title: 'Supermigrate',
   description: '',
 };
 
