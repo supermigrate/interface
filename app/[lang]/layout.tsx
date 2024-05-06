@@ -10,13 +10,13 @@ interface RootProps {
 
 export const metadata: Metadata = {
   title: 'Supermigrate',
-  description: '',
+  description: 'Your gateway to L2s',
 };
 
 export default function RootLayout({ params, children }: Readonly<RootProps>) {
   return (
     <html lang={params.lang}>
-      <body className="font-Bitform" suppressHydrationWarning={true}>
+      <body className="font-Aeonik" suppressHydrationWarning={true}>
         <App locale={params}>{children}</App>
       </body>
     </html>
